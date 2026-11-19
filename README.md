@@ -1,11 +1,11 @@
 # ChatAppProgPart2 - QuickChat Application
 
-## 📖 Project Overview
+##  Project Overview
 Welcome to **ChatAppProgPart2**, a robust Java-based console application developed for the Programming 1A (PROG5121) module. This project is the second part of a larger application, focusing on building the core messaging functionality called "QuickChat."
 
 The application simulates a real-world messaging environment where users must first securely register and authenticate. Once logged in, they gain access to the QuickChat menu, where they can compose, validate, send, disregard, or store messages to a local JSON database. The project emphasizes clean code architecture, robust data validation, string manipulation, object-oriented principles, and automated testing.
 
-## ✨ Key Features & Functionality
+## Key Features & Functionality
 
 ### 1. Secure User Authentication (Part 1 Integration)
 *   **Username Validation:** Ensures the username contains an underscore (`_`) and is no more than five characters long.
@@ -39,7 +39,7 @@ The application simulates a real-world messaging environment where users must fi
     *   `e)` Delete a message using the message hash (the JSON file is updated too).
     *   `f)` Display a report with the full details of all stored messages.
 
-## 🏗️ Class Architecture
+##  Class Architecture
 The application is divided into three core classes to maintain a clean separation of concerns:
 
 1.  **`Main.java` (The Driver Class):** 
@@ -52,7 +52,7 @@ The application is divided into three core classes to maintain a clean separatio
     *   Responsible for creating message objects.
     *   Contains the logic for ID generation, Hash creation, length validation, and JSON file writing.
 
-## 🧪 Testing & Quality Assurance
+##  Testing & Quality Assurance
 
 This project uses JUnit 5 for the Login and Message classes.
 
@@ -68,10 +68,10 @@ mvn -B clean verify
 
 The GitHub Actions workflow is `.github/workflows/testjava.yml`. It checks that `Testdata.yml` exists and runs the complete Maven test suite using JDK 17, matching the Java version configured in `pom.xml`.
 
-## ⚙️ Continuous Integration / Continuous Deployment (CI/CD)
+##  Continuous Integration / Continuous Deployment (CI/CD)
 The project is integrated with **GitHub Actions**. The workflow (`.github/workflows/testjava.yml`) runs on pushes and pull requests to `main` or `master`. It sets up JDK 17, confirms that `Testdata.yml` is present, and runs `mvn -B clean verify` so the full JUnit suite is executed.
 
-## 🚀 Installation & How to Run
+## Installation & How to Run
 
 ### Prerequisites
 *   Java Development Kit (JDK) 17 or higher installed.
