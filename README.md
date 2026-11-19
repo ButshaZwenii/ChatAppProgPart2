@@ -1,4 +1,4 @@
-# ChatAppProgPart2 - QuickChat Application
+# ChatAppProg - QuickChat Application
 
 ##  Project Overview
 Welcome to **ChatAppProgPart2**, a robust Java-based console application developed for the Programming 1A (PROG5121) module. This project is the second part of a larger application, focusing on building the core messaging functionality called "QuickChat."
