@@ -1,7 +1,7 @@
 # ChatAppProg - QuickChat Application
 
 ##  Project Overview
-Welcome to **ChatAppProgPart2**, a robust Java-based console application developed for the Programming 1A (PROG5121) module. This project is the second part of a larger application, focusing on building the core messaging functionality called "QuickChat."
+Welcome to **ChatApp**, a robust Java-based console application developed for the Programming 1A (PROG5121) module. This project is the second part of a larger application, focusing on building the core messaging functionality called "QuickChat."
 
 The application simulates a real-world messaging environment where users must first securely register and authenticate. Once logged in, they gain access to the QuickChat menu, where they can compose, validate, send, disregard, or store messages to a local JSON database. The project emphasizes clean code architecture, robust data validation, string manipulation, object-oriented principles, and automated testing.
 
