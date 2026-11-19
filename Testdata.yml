@@ -1,0 +1,98 @@
+# Part 3 assignment test data.
+# This file is read by MessageTest.java during the Maven/JUnit test run.
+# The application class for the assignment's message tasks is Message.
+
+messages:
+  - testNumber: 1
+    messageID: "0000000001"
+    messageNumber: 0
+    recipient: "+27834557896"
+    message: "Did you get the cake?"
+    flag: SENT
+
+  - testNumber: 2
+    messageID: "0000000002"
+    messageNumber: 1
+    recipient: "+27838884567"
+    message: "Where are you? You are late! I have asked you to be on time."
+    flag: STORED
+
+  - testNumber: 3
+    messageID: "0000000003"
+    messageNumber: 2
+    recipient: "+27834484567"
+    message: "Yohoooo, I am at your gate."
+    flag: DISREGARDED
+
+  - testNumber: 4
+    # The Part 3 search test explicitly gives 0838884567 as the ID to search.
+    messageID: "0838884567"
+    messageNumber: 3
+    recipient: "0838884567"
+    message: "It is dinner time!"
+    flag: SENT
+
+  - testNumber: 5
+    messageID: "0000000005"
+    messageNumber: 4
+    recipient: "+27838884567"
+    message: "Ok, I am leaving without you."
+    flag: STORED
+
+testCases:
+  sentMessages:
+    expected:
+      - "Did you get the cake?"
+      - "It is dinner time!"
+
+  disregardedMessages:
+    expected:
+      - "Yohoooo, I am at your gate."
+
+  storedMessages:
+    expected:
+      - "Where are you? You are late! I have asked you to be on time."
+      - "Ok, I am leaving without you."
+
+  messageIDs:
+    expected:
+      - "0000000001"
+      - "0000000002"
+      - "0000000003"
+      - "0838884567"
+      - "0000000005"
+
+  messageHashes:
+    expected:
+      - "00:0:DIDCAKE"
+      - "00:1:WHERETIME"
+      - "00:2:YOHOOOOGATE"
+      - "08:3:ITTIME"
+      - "00:4:OKYOU"
+
+  longestStoredMessage:
+    expected: "Where are you? You are late! I have asked you to be on time."
+
+  searchByMessageID:
+    messageID: "0838884567"
+    expectedRecipient: "0838884567"
+    expectedMessage: "It is dinner time!"
+
+  searchByRecipient:
+    recipient: "+27838884567"
+    expected:
+      - "Where are you? You are late! I have asked you to be on time."
+      - "Ok, I am leaving without you."
+
+  deleteByMessageHash:
+    messageHash: "00:1:WHERETIME"
+    expectedDeletedMessage: "Where are you? You are late! I have asked you to be on time"
+
+  displayReport:
+    requiredFields:
+      - "Message Hash:"
+      - "Recipient:"
+      - "Message:"
+    expectedSentHashes:
+      - "00:0:DIDCAKE"
+      - "08:3:ITTIME"

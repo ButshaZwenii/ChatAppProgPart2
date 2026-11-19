@@ -148,4 +148,9 @@ public class Login {
     public boolean isRegistered() {
         return registered;
     }
+
+    // Used by QuickChat to show who sent each message
+    public String getUsername() {
+        return username;
+    }
 }
