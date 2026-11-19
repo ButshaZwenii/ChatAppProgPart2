@@ -84,7 +84,7 @@ The project is integrated with **GitHub Actions**. The workflow (`.github/workfl
    git clone https://github.com/ButshaZwenii/ChatAppProgPart2.git
 
 ### Youtube Link
-https://github.com/ButshaZwenii/ChatAppProgPart2.git
+https://youtu.be/ISXjcbUv3F4
 
 
 
